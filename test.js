@@ -7,6 +7,47 @@ function sorter(a, b) {
     return a > b ? -1 : a < b ? 1 : 0;
 }
 
+// AXIS
+
+test('axis, 2D, 1 range', function(t) {
+    t.deepEqual(neighbours.axis(1, 2).sort(sorter), [
+                 [ 1, 0],
+        [ 0, 1],          [ 0,-1],
+                 [-1, 0]
+    ].sort(sorter));
+    t.end();
+});
+
+test('axis, 2D, 2 range', function(t) {
+    t.deepEqual(neighbours.axis(2, 2).sort(sorter), [
+                          [ 2, 0],
+                          [ 1, 0],
+        [ 0, 2], [ 0, 1],          [ 0,-1], [ 0,-2],
+                          [-1, 0],
+                          [-2, 0]
+    ].sort(sorter));
+    t.end();
+});
+
+test('axis, 3D, 1 range', function(t) {
+    t.deepEqual(neighbours.axis(1, 3).sort(sorter), [
+
+                    [ 1, 0, 0],
+
+
+                    [ 0, 1, 0],
+        [ 0, 0, 1],             [ 0, 0,-1],
+                    [ 0,-1, 0],
+
+
+                    [-1, 0, 0]
+
+    ].sort(sorter));
+    t.end();
+});
+
+// CORNER
+
 test('corner, 2D, 1 range', function(t) {
     t.deepEqual(neighbours.corner(1, 2).sort(sorter), [
         [ 1, 1],          [ 1,-1],
@@ -75,3 +116,4 @@ test('edge, 3D, 1 range', function(t) {
     ].sort(sorter));
     t.end();
 });
+

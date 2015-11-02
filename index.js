@@ -47,12 +47,12 @@ function axis(range, dims) {
 
         if (d === dims-1) {
             for (i = -range; i <= range; i += 1) {
-                match = (i === 0);
-                for (k = 0; !match && k < dims; k++) {
-                    match = (temp[k] === 0);
+                match = (i === 0 ? 1 : 0);
+                for (k = 0; k < dims; k++) {
+                    match+= (temp[k] === 0 ? 1 : 0);
                 }
 
-                if (match) {
+                if (match === dims-1) {
                     array.push(temp.concat(i));
                 }
             }

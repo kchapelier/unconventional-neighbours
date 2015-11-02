@@ -24,7 +24,6 @@ neighbours.face(range, dimensions);
 
 ```js
 // deep requires for optimized browserified package
-
 var axis = require('unconventional-neighbours/functions/axis'),
     corner = require('unconventional-neighbours/functions/corner'),
     edge = require('unconventional-neighbours/functions/edge'),
@@ -39,6 +38,6 @@ face(range, dimensions);
 Each function takes two arguments and returns an array of relative coordinates.
 
 * `range` determines how large the neighborhood extends, and defaults to 1.
-* `dimensions` determines how many dimensions the Von Neumann neighborhood
+* `dimensions` determines how many dimensions the neighborhood
   covers - i.e. 2 will return the results for a 2D grid, and 3 will return the
   results for a 3D grid. May be any value above zero.

@@ -1,6 +1,6 @@
 {
   "name": "unconventional-neighbours",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Generates unconventional neighbourhoods of any range/dimensions",
   "main": "index.js",
   "scripts": {

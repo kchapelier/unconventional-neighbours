@@ -1,0 +1,29 @@
+{
+  "name": "unconventional-neighbours",
+  "version": "0.0.0",
+  "description": "Generates unconventional neighbourhoods of any range/dimensions",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kchapelier/unconventional-neighbours.git"
+  },
+  "keywords": [
+    "neighborhoods",
+    "adjacent",
+    "cell",
+    "table",
+    "grid"
+  ],
+  "author": "Kevin Chapelier",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kchapelier/unconventional-neighbours/issues"
+  },
+  "homepage": "https://github.com/kchapelier/unconventional-neighbours",
+  "devDependencies": {
+    "tape": "^4.2.2"
+  }
+}

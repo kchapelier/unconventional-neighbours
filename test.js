@@ -1,5 +1,5 @@
-var neighbours = require('./');
-var test = require('tape');
+var neighbours = require('./'),
+    test = require('tape');
 
 function sorter(a, b) {
     a = a.join(',');
@@ -140,7 +140,7 @@ test('face, 2D, 2 range', function(t) {
 });
 
 test('face, 3D, 1 range', function(t) {
-    t.deepEqual(neighbours.face(2, 3).sort(sorter), [
+    t.deepEqual(neighbours.face(1, 3).sort(sorter), [
         [ 1, 1, 1], [ 1, 1, 0], [ 1, 1,-1],
         [ 1, 0, 1], [ 1, 0, 0], [ 1, 0,-1],
         [ 1,-1, 1], [ 1,-1, 0], [ 1,-1,-1],
